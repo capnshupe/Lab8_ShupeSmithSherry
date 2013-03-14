@@ -1,17 +1,23 @@
 package lab8_shupesmithsherry;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * @author s509086
  */
 public class countdown
 {
-
+	Scanner keyScan = new Scanner(System.in);
+	
 	public countdown()
 	{
 	}
-
+/**
+ * Uses a random number generator that will create a 9 letter string 
+ * of distinct letters.
+ * @return 
+ */
 	public String genLetters()
 	{
 		String generatedLetters = "";
@@ -52,7 +58,20 @@ public class countdown
 
 	public void PlayGame()
 	{
+		String gLetters = this.genLetters();
+		String playInput;
+		String compInput;
+		System.out.println("Letters: " + gLetters);
+		System.out.println("You have 30 seconds to create a word out of the letters.");
 		long startTime = System.currentTimeMillis();
+		System.out.print("Player 1: ");
+		playInput = keyScan.next();
+		long endTime = System.currentTimeMillis();
+		if(endTime - startTime > 30000)
+				System.out.println("Time exceeded, player 2 wins!");
+		else{
+			
+		}
 		
 	}
 
