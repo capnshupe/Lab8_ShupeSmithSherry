@@ -14,10 +14,56 @@ import java.util.Scanner;
  */
 public class computer
 {
-   public void computer() throws FileNotFoundException
-   {
-    File myFile = new File("dictionary.txt");
-     Scanner fileInput = new Scanner(myFile);
-}  
-    
+	Scanner fileInput;
+	public void computer() throws FileNotFoundException
+	{
+		File myFile = new File("dictionary.txt");
+		this.fileInput = new Scanner(myFile);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String getWord(String letters){
+		char[] arrLetters = letters.toCharArray();
+		while(fileInput.hasNextLine())
+		
+		
+		return "";
+	}
 }
