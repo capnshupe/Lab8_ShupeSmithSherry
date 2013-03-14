@@ -61,9 +61,26 @@ public class computer
 	
 	public String getWord(String letters){
 		char[] arrLetters = letters.toCharArray();
-		while(fileInput.hasNextLine())
+		String currentWord = "";
+		char[] currentArr;
+		boolean isPresent = true;
+		while(fileInput.hasNextLine()){
+			currentWord = fileInput.nextLine();
+			currentArr = currentWord.toCharArray();
+			for(int i = 0; i < currentArr.length; i++){
+				for(int j = 0; j < arrLetters.length; j++){
+					if(currentArr[i] == arrLetters[j] && isPresent)
+						isPresent = true;
+					else isPresent = false;
+					
+				}
+				if(!isPresent){
+					break;
+				}
+			}
+		}
 		
 		
-		return "";
+		return currentWord;
 	}
 }
