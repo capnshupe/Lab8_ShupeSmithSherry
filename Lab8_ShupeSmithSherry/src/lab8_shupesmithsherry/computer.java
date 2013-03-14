@@ -13,21 +13,75 @@ import java.util.Scanner;
  *
  * @author s505835
  */
-public class computer {
-
-    public computer() throws FileNotFoundException {
-        File myFile = new File("dictionary.txt");
-        Scanner fileInput = new Scanner(myFile);
-        String readLine = "";
-        while (fileInput.hasNextLine()) 
-        {
-            readLine = fileInput.nextLine();
-            ArrayList dictionary = readLine.split(" ");
-        }
-        
-    }
-    public String getThreeLetters()
-    {
-        
-    }
+public class computer
+{
+	Scanner fileInput;
+	public void computer() throws FileNotFoundException
+	{
+		File myFile = new File("dictionary.txt");
+		this.fileInput = new Scanner(myFile);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String getWord(String letters){
+		char[] arrLetters = letters.toCharArray();
+		String currentWord = "";
+		char[] currentArr;
+		boolean isPresent = true;
+		while(fileInput.hasNextLine()){
+			currentWord = fileInput.nextLine();
+			currentArr = currentWord.toCharArray();
+			for(int i = 0; i < currentArr.length; i++){
+				for(int j = 0; j < arrLetters.length; j++){
+					if(currentArr[i] == arrLetters[j] && isPresent)
+						isPresent = true;
+					else isPresent = false;
+					
+				}
+				if(!isPresent){
+					break;
+				}
+			}
+		}
+		
+		
+		return currentWord;
+	}
 }
