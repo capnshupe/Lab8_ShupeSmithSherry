@@ -32,9 +32,5 @@ public class Centurion
         }
           return total;
     }
-    public String javisMove() throws FileNotFoundException
-    {
-        File myFile = new File("dictionary.txt");
-        Scanner fileInput = new Scanner(myFile);
-    }
+    
 }
