@@ -21,7 +21,7 @@ public class Centurion
     System.out.print("Player 2: ");
     
     
-    
+    return "";
     }
     public int calculateScore(String s)
     {

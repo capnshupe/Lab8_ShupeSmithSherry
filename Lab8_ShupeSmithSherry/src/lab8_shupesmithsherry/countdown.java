@@ -74,7 +74,7 @@ public class countdown {
     }
 
     public String compWord(String letters) {
-
-        return "";
+        computer Jarvis = new computer();
+        return Jarvis.getWord(letters);
     }
 }
