@@ -76,13 +76,16 @@ public class computer
 	
 	
 	
-	public String getWord(String letters){
+	public String getWord(String letters) throws FileNotFoundException{
 		char[] arrLetters = letters.toCharArray();
 		String currentWord = "";
 		char[] currentArr;
 		boolean isPresent = true;
-		while(fileInput.hasNextLine()){
-			currentWord = fileInput.nextLine();
+                computer jarman = new computer();
+                ArrayList<String> dictionary = jarman.getDictionary();
+                int counter = 0;
+		while(counter < dictionary.size()){
+			currentWord = dictionary.get(counter);
 			currentArr = currentWord.toCharArray();
 			for(int i = 0; i < currentArr.length; i++){
 				for(int j = 0; j < arrLetters.length; j++){
