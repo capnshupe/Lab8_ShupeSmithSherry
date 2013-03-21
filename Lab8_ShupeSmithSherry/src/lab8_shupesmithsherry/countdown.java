@@ -62,19 +62,19 @@ public class countdown {
         if (endTime - startTime > 30000) {
             System.out.println("Time exceeded, player 2 wins!");
         } else {
-            compInput = this.compWord(gLetters);
-            System.out.println("Player 2: " + compInput);
-            if (playInput.length() > compInput.length()) {
-                System.out.println("Player 1 wins!");
-            } else {
-                System.out.println("Player 2 wins!");
-            }
+            /*  //compInput = this.compWord(gLetters);
+             //System.out.println("Player 2: " + compInput);
+             if (playInput.length() > compInput.length()) {
+             System.out.println("Player 1 wins!");
+             } else {
+             System.out.println("Player 2 wins!");
+             }*/
         }
 
     }
 
-    public String compWord(String letters) {
-        computer Jarvis = new computer();
-        return Jarvis.getWord(letters);
-    }
+    /*  public String compWord(String letters) {
+     computer Jarvis = new computer();
+     return Jarvis.getWord(letters);
+     }*/
 }
