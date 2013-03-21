@@ -10,7 +10,7 @@ public class Lab8_ShupeSmithSherry
    public static void main(String[] args) 
 	{
             //initialization of variables for centurion game
-            
+            Centurion playCenturion = new Centurion();
 
             
             //initialization of variables for countdown
@@ -46,8 +46,7 @@ public class Lab8_ShupeSmithSherry
                 System.out.print("Choice: ");
                 choice = choiceScanner.nextInt();
                 switch (choice){
-                    case 0: 
-                        
+                    case 0: playCenturion.playGame();
                         break;
                     case 1: playCountdown.PlayGame();
                         break;
