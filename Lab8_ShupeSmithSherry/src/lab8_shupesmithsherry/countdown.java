@@ -1,5 +1,7 @@
 package lab8_shupesmithsherry;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -49,7 +51,7 @@ public class countdown {
         return generatedLetters;
     }
 
-    public void PlayGame() {
+    public void PlayGame() throws FileNotFoundException {
         String gLetters = this.genLetters();
         String playInput;
         String compInput;
@@ -62,6 +64,11 @@ public class countdown {
         if (endTime - startTime > 30000) {
             System.out.println("Time exceeded, player 2 wins!");
         } else {
+            if(this.checkWord(playInput)){
+                
+            }else{
+                System.out.println("Invalid word, player 2 wins!");
+            }
             /*  //compInput = this.compWord(gLetters);
              //System.out.println("Player 2: " + compInput);
              if (playInput.length() > compInput.length()) {
@@ -73,6 +80,21 @@ public class countdown {
 
     }
 
+    
+    public boolean checkWord(String word) throws FileNotFoundException{
+        computer jarman = new computer();
+        ArrayList<String> dictionary = jarman.getDictionary();
+        for(int i = 0; i < dictionary.size(); i++){
+            String current = dictionary.get(i);
+            current = current.toLowerCase();
+            if(word.compareTo(current) == 0){
+                return true;
+            }
+        }
+        
+        
+        return false;
+    }
     /*  public String compWord(String letters) {
      computer Jarvis = new computer();
      return Jarvis.getWord(letters);
