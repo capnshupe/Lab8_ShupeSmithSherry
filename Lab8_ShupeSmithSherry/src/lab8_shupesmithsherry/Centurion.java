@@ -19,7 +19,7 @@ public class Centurion {
     public void playGame() throws FileNotFoundException {
         ArrayList<String> threeletterword = new ArrayList<>();
         Random rng = new Random();
-        int randomnum = rng.nextInt(threeletterword.size());
+        int randomnum = rng.nextInt(/*threeletterword.size()*/4);
         Scanner input = new Scanner(System.in);
         while (userTotal <= 100 && comTotal <= 100) {
             if (userTotal == 100) {
