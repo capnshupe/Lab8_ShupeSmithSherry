@@ -14,9 +14,11 @@ public class Centurion
     int userTotal = 0;
     int comTotal = 0;
     
-    public String playGame()
+    public void playGame()
     {
-     
+    ArrayList<String> threeletterword = new ArrayList<>();
+    Random rng = new Random();
+    int randomnum = rng.nextInt(threeletterword.size());
     Scanner input = new Scanner(System.in);
     while ( userTotal <= 100 && comTotal <= 100)
     {
@@ -33,12 +35,19 @@ public class Centurion
     System.out.print("Player 1 score: " + calculateScore(s));
     userTotal +=  calculateScore(s);
     System.out.print("Player 2: ");
+    for (int i =0; i<dictionary.size;i++)
+    {
+        if (dictionary.get(i).length == 3)
+        {
+            threeletterword.add(dictionary.get(i));
+        }
+    }
     
     System.out.print("Player 2 score: " + calculateScore(s));
     comTotal +=  calculateScore(s);
     }
     
-    return "";
+    
     }
     public int calculateScore(String s)
     {
