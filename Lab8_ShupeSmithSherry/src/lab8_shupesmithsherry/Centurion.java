@@ -11,15 +11,32 @@ import java.io.*;
  */
 public class Centurion 
 {
+    int userTotal = 0;
+    int comTotal = 0;
+    
     public String playGame()
     {
-        
+     
     Scanner input = new Scanner(System.in);
+    while ( userTotal <= 100 && comTotal <= 100)
+    {
+        if (userTotal == 100)
+        {
+            System.out.println("Player 2 wins!");
+        }
+        if(comTotal == 100)
+        {
+            System.out.println("Player 1 wins!");
+        }
     System.out.print("Player 1: ");
     String s = input.next();
     System.out.print("Player 1 score: " + calculateScore(s));
+    userTotal +=  calculateScore(s);
     System.out.print("Player 2: ");
     
+    System.out.print("Player 2 score: " + calculateScore(s));
+    comTotal +=  calculateScore(s);
+    }
     
     return "";
     }
