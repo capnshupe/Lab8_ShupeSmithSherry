@@ -1,5 +1,6 @@
 package lab8_shupesmithsherry;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Scanner;
  */
 public class Lab8_ShupeSmithSherry 
 {
-   public static void main(String[] args) 
+   public static void main(String[] args) throws FileNotFoundException 
 	{
             //initialization of variables for centurion game
             Centurion playCenturion = new Centurion();
@@ -18,7 +19,7 @@ public class Lab8_ShupeSmithSherry
             
             
             //initialization of variables for acrostics
-            
+            Acrostics playAcrostics = new Acrostics();
             
             
             //initialization of variables for beheadments
@@ -50,7 +51,8 @@ public class Lab8_ShupeSmithSherry
                         break;
                     case 1: playCountdown.PlayGame();
                         break;
-                    
+                    case 2: playAcrostics.acrosticsGame();
+                        break;
                         
                         
                         
