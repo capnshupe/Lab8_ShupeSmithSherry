@@ -34,7 +34,7 @@ public class Centurion
     String s = input.next();
     System.out.print("Player 1 score: " + calculateScore(s));
     userTotal +=  calculateScore(s);
-    System.out.print("Player 2: ");
+    
     for (int i =0; i<dictionary.size;i++)
     {
         if (dictionary.get(i).length == 3)
@@ -42,6 +42,8 @@ public class Centurion
             threeletterword.add(dictionary.get(i));
         }
     }
+    System.out.print("Player 2: ");
+    
     
     System.out.print("Player 2 score: " + calculateScore(s));
     comTotal +=  calculateScore(s);
@@ -58,5 +60,6 @@ public class Centurion
         }
           return total;
     }
+    
     
 }
