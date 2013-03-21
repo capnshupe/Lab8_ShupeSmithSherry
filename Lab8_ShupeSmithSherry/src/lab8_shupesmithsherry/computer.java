@@ -18,11 +18,27 @@ public class computer
 	Scanner fileInput;
 	public void computer() throws FileNotFoundException
 	{
-		File myFile = new File("dictionary.txt");
-		this.fileInput = new Scanner(myFile);
+		
+		
 	}
 	
-	
+	public static ArrayList<String> getDictionary() throws FileNotFoundException{
+            
+            ArrayList<String> dictionary = new ArrayList<String>();
+            File myFile = new File("dictionary.txt");
+            Scanner fileInput = new Scanner(myFile);
+            
+            String temp = "";
+            
+            while(fileInput.hasNext()){
+                temp = fileInput.nextLine();
+                if(!temp.equals("")){
+                    dictionary.add(temp);
+                }
+            }
+            
+            return dictionary;
+        }
 	
 	
 	
