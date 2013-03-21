@@ -38,14 +38,20 @@ public class Acrostics {
                 break;
             } else if (letterArray[i] == player1Array[0] || letterArray[(s.length() - 1) - i] == player1Array[playersWords[i].length() - 1]) {
                 ArrayList<String> dictionary = computer.getDictionary();
+                boolean wordFound = false;
                 for (int f = 0; f < dictionary.size(); f++) {
                     if (playersWords[i].equals(dictionary.get(f))) {
                         System.out.println("Word " + i + " works!");
+                        wordFound=true;
                         break;
                     } else if (!playersWords[i].equals(dictionary.get(f))) {
                         continue;
                     }
                 }
+                if(!wordFound){
+                    System.out.println("Word " + i + " does not work!");
+                }
+                wordFound = false;
             }
         }
     }
