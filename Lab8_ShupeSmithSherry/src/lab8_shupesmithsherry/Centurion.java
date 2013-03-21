@@ -39,13 +39,9 @@ public class Centurion {
                 }
             }
             System.out.print("Player 2: ");
-
-
             System.out.print("Player 2 score: " + calculateScore(s));
             comTotal += calculateScore(s);
         }
-
-
     }
 
     public int calculateScore(String s) {
